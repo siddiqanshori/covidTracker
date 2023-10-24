@@ -1,0 +1,154 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css");
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Viga&display=swap');
+body {
+  background-color: #f7f7f7;
+  height: 100vh;
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+body:after{
+  position: absolute;
+  content: "";
+  background: #ee38a8;
+  width: 100%;
+  height: 50%;
+  top: 0;
+}
+
+body:before{
+  position: absolute;
+  content: "";
+  background: #f7f7f7;
+  width: 100%;
+  height: 50%;
+  bottom: 0;
+}
+
+.container {
+  z-index: 1;
+  border-radius: 24px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.75);
+  height: 92%;
+  margin: 0 auto;
+  background: white;
+  padding: 0 30px 30px;
+  display: flex;
+  gap: 150px;
+  align-items: center;
+}
+
+.header {
+  z-index: 1;
+  display: block;
+  text-align: center;
+  place-content: center;
+  margin: 0 auto;
+  border-radius: 24px;
+  padding: 2%;
+}
+
+.header h2{
+  font-weight: bold;
+  color: #3498db; 
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+}
+
+.input-container input{
+  width: 250px;
+  border-radius: 50px;
+  line-height: 2;           /* Mengatur tinggi baris untuk menengahkan vertikal */
+  text-align: center;
+  place-content: center;
+  color: #3498db;
+  border: solid 2px #3498db; 
+  outline: none;
+  margin-right: 10px;
+  transition: background-color 0.5s;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.custom-button {
+  background-color: #fff;
+  color: #3498db; 
+  border: solid 2px #3498db; 
+  border-radius: 50px; 
+  padding: 6px 15px;
+  font-size: 16px;
+  cursor: pointer; 
+  transition: background-color 0.5s; /* Efek transisi warna latar belakang */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.input-container input::placeholder {
+  color: #3498db;
+}
+
+.input-container input:hover::placeholder {
+  color: #fff;
+}
+
+.custom-button:hover,
+.input-container input:hover {
+  background-color: #3498db;
+  color: #fff;
+}
+
+.custom-button:active {
+  background-color: #145c9e;
+  color: #fff;
+}
+
+
+
+.card {
+  background: #ccc;
+  color: #fff;
+  padding-top: 10px;
+  height: 190px;
+  box-shadow:  2px 5px 5px rgba(0, 0, 0, 0.5);
+}
+
+.card-title, .card-text{
+  font-weight: bolder;
+  letter-spacing: 0.1rem;
+  text-shadow:  1px 1px 4px rgba(0, 0, 0, 0.4);
+}
+
+i{
+  font-size: 4rem; /* Sesuaikan ukuran ikon sesuai kebutuhan */
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+}
+
+img{
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.card-body {
+  text-align: center;
+}
+
+.card.a {
+  background: #41a7ff;
+}
+.card.b {
+  background: #ee2929;
+}
+.card.c {
+  background: #27b22c;
+}
+.card.d {
+  background: #d83f3f;
+}
+.card.e {
+  background: #7b6161;
+}
+.card.f {
+  background: #fca90f;
+}
