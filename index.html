@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Covid-19 Tracker</title>
+
+    <!-- CDN BOOTSTRAP -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+
+    <!-- My CSS -->
+    <link rel="stylesheet" type="text/css" href="asset/css/datacovid.css" />
+    
+  </head>
+
+  <body>
+    <!-- Content -->
+    <div class="container">
+      <form action="" id="formCovid">
+        <!-- Header -->
+        <div class="header">
+            <h2>Covid-19 Case in <span id="namanegara"></span></h2>
+            <div class="input-container">
+              <input id="country" type="text" placeholder="Masukan Nama Negara..." />
+              <button type="submit" class="custom-button">Cari</button>
+            </div>
+        </div>
+        <!-- Akhir Header -->
+
+        <!-- Card -->
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+          
+          <!-- Card 1 -->
+          <div class="col">
+            <div class="card a">
+              <img src="asset/img/icons8-coronavirus-96.png" alt="corona virus active">
+              <div class="card-body">
+                <h5 class="card-title">Active Cases</h5>
+                <h6 class="card-text" id="active"></h6>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="col">
+            <div class="card b">
+              <img src="asset/img/covidgrowth1-removebg-preview.png" alt="new corona virus">
+              <div class="card-body">
+                <h5 class="card-title">New Cases</h5>
+                <h6 class="card-text" id="new"></h6>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="col">
+            <div class="card c">
+              <img src="asset/img/recovery.png" alt="corona virus recovered">
+              <div class="card-body">
+                <h5 class="card-title">Recovered Cases</h5>
+                <h6 class="card-text" id="recovered"></h6>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="col">
+            <div class="card d">
+              <img src="asset/img/total cases.png" alt="corona virus total">
+              <div class="card-body">
+                <h5 class="card-title">Total Cases</h5>
+                <h6 class="card-text" id="total"></h6>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 5 -->
+          <div class="col">
+            <div class="card e">
+              <img src="asset/img/totaldeaths2.png" alt="corona virus deaths">
+              <div class="card-body">
+                <h5 class="card-title">Total Deaths</h5>
+                <h6 class="card-text" id="deaths"></h6>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 6 -->
+          <div class="col">
+            <div class="card f">
+              <img src="asset/img/totaltest2.png" alt="corona virus tests">
+              <div class="card-body">
+                <h5 class="card-title">Total Tests</h5>
+                <h6 class="card-text" id="tests"></h6>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Akhir Card -->
+      </form>
+    </div>
+
+    <!-- API -->
+    <script src="asset/js/api.js"></script>
+
+    <!-- JS BOOTSTRAP -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+      integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Text in Case -->
+    <script>
+      var formulir = document.getElementById('formCovid')
+      var negara = document.getElementById('namanegara')
+      var input = document.getElementById('country')
+
+      formulir.addEventListener('submit', function (event) {
+
+        // agar form tidak benar benar mengirimkan data ke server dan merefresh halaman
+        event.preventDefault()
+
+        namanegara.innerText = country.value
+
+      })
+
+    </script>
+  </body>
+</html>
